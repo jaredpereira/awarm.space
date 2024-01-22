@@ -183,6 +183,7 @@ const Shelf = [
   },
   { title: "Catch 22", creator: "Joseph Heller", mediaType: "print" },
   { title: "Electro 35 GT", creator: "Yashica", mediaType: "hardware" },
+  { title: "Endless Summer", creator: "Fennesz", mediaType: "audio" },
 ] as const;
 
 let mediaTypes = new Set(Shelf.map((item) => item.mediaType));
