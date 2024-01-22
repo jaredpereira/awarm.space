@@ -6,7 +6,7 @@ export default function InterestsPage() {
     <div>
       <h1>interests</h1>
       <ul className="flex flex-col gap-2">
-        {Interests.toSorted(() => Math.random() - Math.random()).map(
+        {Interests.toSorted((a, b) => a.interest.localeCompare(b.interest)).map(
           (item, index) => (
             <li key={index}>{item.interest}</li>
           ),
@@ -15,7 +15,7 @@ export default function InterestsPage() {
       <br />
       <h2>dreams</h2>
       <ul className="flex flex-col gap-2">
-        {Dreams.toSorted(() => Math.random() - Math.random()).map(
+        {Dreams.toSorted((a, b) => a.dream.localeCompare(b.dream)).map(
           (item, index) => (
             <li key={index}>{item.dream}</li>
           ),
