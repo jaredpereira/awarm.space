@@ -147,4 +147,14 @@ const Shelf = [
     creator: "John Plant",
     mediaType: "video",
   },
+  {
+    title: "Debt: The First 5000 Years",
+    creator: "David Graeber",
+    mediaType: "print",
+  },
+  {
+    title: "The Secret of Psalm 46",
+    creator: "Brian Moriarty",
+    mediaType: "video",
+  },
 ] as const;
