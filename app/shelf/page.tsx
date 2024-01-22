@@ -157,4 +157,9 @@ const Shelf = [
     creator: "Brian Moriarty",
     mediaType: "video",
   },
+  {
+    title: "norns",
+    creator: "monome",
+    mediaType: "hardware",
+  },
 ] as const;
