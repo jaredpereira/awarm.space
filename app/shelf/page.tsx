@@ -1,19 +1,37 @@
-export const metadata = {
-  title: "awarm.space: shelf",
-  description: "a list of things i like",
-};
+"use client";
+import { useState } from "react";
 
 export default function ShelfPage() {
+  let [filter, setFilter] = useState<
+    null | (typeof Shelf)[number]["mediaType"]
+  >(null);
   return (
-    <div>
+    <div className="flex flex-col gap-4">
+      <div className="flex flex-row gap-2">
+        {Array.from(mediaTypes).map((mediaType) => (
+          <button
+            className={`border p-1 ${
+              mediaType === filter ? "bg-gray-200" : ""
+            }`}
+            key={mediaType}
+            onClick={() => {
+              if (filter === mediaType) {
+                setFilter(null);
+              } else setFilter(mediaType);
+            }}
+          >
+            {mediaType}
+          </button>
+        ))}
+      </div>
       <ul className="flex flex-col gap-2">
-        {Shelf.toSorted((a, b) => a.title.localeCompare(b.title)).map(
-          (item, index) => (
+        {Shelf.filter((f) => !filter || f.mediaType === filter)
+          .toSorted((a, b) => a.title.localeCompare(b.title))
+          .map((item, index) => (
             <li key={index}>
               {item.title} - {item.creator}
             </li>
-          ),
-        )}
+          ))}
       </ul>
     </div>
   );
@@ -164,3 +182,5 @@ const Shelf = [
     mediaType: "hardware",
   },
 ] as const;
+
+let mediaTypes = new Set(Shelf.map((item) => item.mediaType));
