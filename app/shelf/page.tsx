@@ -1,5 +1,6 @@
 export const metadata = {
   title: "awarm.space: shelf",
+  description: "a list of things i like",
 };
 
 export default function ShelfPage() {

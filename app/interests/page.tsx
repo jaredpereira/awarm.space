@@ -1,5 +1,6 @@
 export const metadata = {
   title: "awarm.space: interests",
+  description: "a list of things i'm interested in",
 };
 export default function InterestsPage() {
   return (

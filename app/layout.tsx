@@ -4,7 +4,8 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "awarm.space",
-  authors: { name: "Jared Pereira" },
+  description: "jared pereira's personal website",
+  authors: { name: "jared pereira" },
 };
 
 export default function RootLayout({
