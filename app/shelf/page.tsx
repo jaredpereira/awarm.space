@@ -112,11 +112,6 @@ const Shelf = [
     mediaType: "audio",
   },
   { title: "CLPPNG", creator: "clipping.", mediaType: "audio" },
-  {
-    title: "Song Machine: Season One",
-    creator: "Gorillaz",
-    mediaType: "audio",
-  },
   { title: "Charli", creator: "Charli XCX", mediaType: "audio" },
   { title: "Run the Jewels 2", creator: "Run the Jewels", mediaType: "audio" },
   { title: "Hilda", creator: "Luke Pearson", mediaType: "video" },
